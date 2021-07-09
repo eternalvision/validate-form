@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
+    <title>Document</title>
+</head>
+
+<body onload="onsiteLoad()">
+    <div class="flex-container">
+        <h1>Registration Form</h1>
+        <div class="registration-form" id="registration">
+            <!--  -->
+            <div class="input_label">
+                <label class="label-form" for="mail"> Email: </label>
+                <span id="email_error"></span>
+            </div>
+            <input type="text" id="mail" title="Example: abc@mail.domain" placeholder="Enter email" />
+            <!--  -->
+            <div class="input_label">
+                <label class="label-form" for="pass">Password:</label>
+                <span id="firstpass_error"></span>
+            </div>
+            <input type="password" name="pass" id="first_pass" title="Example: abcD3e8S" placeholder="Enter password" />
+            <!--  -->
+            <div class="input_label">
+                <label class="label-form" for="num">Repeat: </label>
+                <span id="secondpass_error"></span>
+            </div>
+            <input type="password" name="num" id="second_pass" title="Repeat password" placeholder="Repeat password" />
+            <!--  -->
+            <button type="submit" class="form--sign__btn" onclick="formRegister()">Sign Up</button>
+        </div>
+        <!--  -->
+        <div class="registration-form" id="user_info">
+            <div id="user_header">
+                <span id="user_name"></span>
+                <span><a href="" onclick="removeReg()">logout</a></span>
+            </div>
+            <div id="form_userdata">
+                <div id="column1" class="column">
+                    <div class="input_label">
+                        <label class="label-form" for="firstname">First Name :</label>
+                        <span id="firstname_error"></span>
+                    </div>
+                    <input type="text" id="firstname" placeholder="Your name" title="Example: Ivan" />
+                    <div class="input_label">
+                        <label class="label-form" for="birth_year">Year of birth:</label>
+                        <span id="year_error"></span>
+                    </div>
+                    <input type="text" id="birth_year" placeholder="Year of birth" title="Example: 1999" />
+                    <div class="input_label">
+                        <label class="label-form" for="phone_num">Phone number :</label>
+                        <span id="phonenum_error"></span>
+                    </div>
+                    <input type="text" id="phone_num" placeholder="Phone number" title="Example: +380112223333" />
+                </div>
+                <div class="input_label">
+                    <label class="label-form" for="lastname">Last Name :</label>
+                    <span id="lastname_error"></span>
+                </div>
+                <input type="text" id="lastname" placeholder="Last Name" title="Example: Ivanov" />
+                <div class="input_label">
+                    <label class="label-form" for="gender">Gender :</label>
+                    <span id="gender_error"></span>
+                </div>
+                <select class="selectGender" type="text" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+                <div class="input_label">
+                    <label class="label-form" for="skype">Skype :</label>
+                    <span id="skype_error"></span>
+                </div>
+                <input type="text" id="skype" placeholder="Enter your id" />
+            </div>
+            <div id="save_message">Saved!</div>
+            <button type="submit" class="form--sign__btn" onclick="saveUserData()">Saved</button>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
